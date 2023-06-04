@@ -1,0 +1,18 @@
+{
+  "name": "Alchemy Spotify Player",
+  "description": "Connects Alchemy Scenes to Spotify Playlists",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgZsdJvAZzfNfwoQ+x9XdVVwJAhk94PHLSgOF1gQbfqgN3+MPLjQnnAbTw0Oc5CNxwEOFv9qeeEehsvEqWZOVsPWsdz9b+S5n+MivDzY8Op+A6Jdx9eAle6ffUPTN/YzIWTlxoTgHMc0B5LVh6sFoVETxYQJZRgaM5eI7XqVN03tXT8s6MOGR5P6R6a9Ykgn8Vigw2d6ym/ohmCmQnKS5fRQEYeQLdXrrDTxbBMhQT/YaULwxd7gIxAtAViV9CbSjz1+6KVlDmEwrqkbk6ek8hh0TvxbrCf58PHV9et8t1N7bphiEC4LqNHZOHotgTpo5UPIeSIAH2Z3qEusHrHdy0QIDAQAB",
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_icon": "assets/alchemy-spotify.png"
+  },
+  "permissions": ["storage", "scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://app.alchemyrpg.com/game/*"],
+      "js": ["content/content.js"]
+    }
+  ]
+}
